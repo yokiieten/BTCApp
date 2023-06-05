@@ -13,13 +13,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        self.window = UIWindow(frame: UIScreen.main.bounds)
-          let mainStoryboard: UIStoryboard = UIStoryboard(name: "Btc", bundle: nil)
-        let btcViewController: BtcViewController = mainStoryboard.instantiateViewController(withIdentifier: "BtcViewController") as! BtcViewController
-
-          self.window?.rootViewController = btcViewController
-
-          self.window?.makeKeyAndVisible()
         return true
     }
 
