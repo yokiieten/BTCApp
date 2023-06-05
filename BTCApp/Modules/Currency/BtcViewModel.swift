@@ -56,6 +56,7 @@ class BtcViewModel {
             }
         }
     }
+    var historicalData: [BtcData] = []
     var updateTimer: Timer?
     var didUpdatePrice: (() -> Void)?
 
@@ -69,9 +70,10 @@ class BtcViewModel {
                 print("No data available: \(error?.localizedDescription ?? "")")
                 return
             }
-            
+            guard let btcData = self?.parseData(data: data) else { return }
             DispatchQueue.main.async {
-                self?.btcData = self?.parseData(data: data)
+                self?.btcData = btcData
+                self?.historicalData.append(btcData)
             }
         }.resume()
     }

@@ -19,6 +19,10 @@
 		D970AD8F2A2DA6D00054519E /* BTCAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D970AD8E2A2DA6D00054519E /* BTCAppUITests.swift */; };
 		D970AD912A2DA6D00054519E /* BTCAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D970AD902A2DA6D00054519E /* BTCAppUITestsLaunchTests.swift */; };
 		D970ADA02A2DAF260054519E /* BtcViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D970AD9F2A2DAF260054519E /* BtcViewModel.swift */; };
+		D970ADA32A2DDD840054519E /* HistoryCurrencyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D970ADA22A2DDD840054519E /* HistoryCurrencyViewController.swift */; };
+		D970ADA52A2DDD980054519E /* HistoryCurrencyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D970ADA42A2DDD980054519E /* HistoryCurrencyViewModel.swift */; };
+		D970ADA72A2DDDAC0054519E /* HistoryCurrency.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D970ADA62A2DDDAC0054519E /* HistoryCurrency.storyboard */; };
+		D970ADA92A2DDDCB0054519E /* Btc.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D970ADA82A2DDDCB0054519E /* Btc.storyboard */; };
 		F2ACD59E551430A0990D9D1F /* Pods_BTCApp_BTCAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D8A6875A71295F5B96145C8 /* Pods_BTCApp_BTCAppUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -62,6 +66,10 @@
 		D970AD8E2A2DA6D00054519E /* BTCAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BTCAppUITests.swift; sourceTree = "<group>"; };
 		D970AD902A2DA6D00054519E /* BTCAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BTCAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		D970AD9F2A2DAF260054519E /* BtcViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BtcViewModel.swift; sourceTree = "<group>"; };
+		D970ADA22A2DDD840054519E /* HistoryCurrencyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryCurrencyViewController.swift; sourceTree = "<group>"; };
+		D970ADA42A2DDD980054519E /* HistoryCurrencyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryCurrencyViewModel.swift; sourceTree = "<group>"; };
+		D970ADA62A2DDDAC0054519E /* HistoryCurrency.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HistoryCurrency.storyboard; sourceTree = "<group>"; };
+		D970ADA82A2DDDCB0054519E /* Btc.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Btc.storyboard; sourceTree = "<group>"; };
 		F61CFE78433C0149FA792D47 /* Pods-BTCApp-BTCAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BTCApp-BTCAppUITests.release.xcconfig"; path = "Target Support Files/Pods-BTCApp-BTCAppUITests/Pods-BTCApp-BTCAppUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -172,6 +180,7 @@
 		D970AD9D2A2DAECE0054519E /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				D970ADA12A2DDCE10054519E /* HistoryCurrency */,
 				D970AD9E2A2DAF080054519E /* Currency */,
 			);
 			path = Modules;
@@ -182,8 +191,19 @@
 			children = (
 				D970AD712A2DA6D00054519E /* BtcViewController.swift */,
 				D970AD9F2A2DAF260054519E /* BtcViewModel.swift */,
+				D970ADA82A2DDDCB0054519E /* Btc.storyboard */,
 			);
 			path = Currency;
+			sourceTree = "<group>";
+		};
+		D970ADA12A2DDCE10054519E /* HistoryCurrency */ = {
+			isa = PBXGroup;
+			children = (
+				D970ADA22A2DDD840054519E /* HistoryCurrencyViewController.swift */,
+				D970ADA42A2DDD980054519E /* HistoryCurrencyViewModel.swift */,
+				D970ADA62A2DDDAC0054519E /* HistoryCurrency.storyboard */,
+			);
+			path = HistoryCurrency;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -296,7 +316,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				D970AD7A2A2DA6D00054519E /* LaunchScreen.storyboard in Resources */,
+				D970ADA92A2DDDCB0054519E /* Btc.storyboard in Resources */,
 				D970AD772A2DA6D00054519E /* Assets.xcassets in Resources */,
+				D970ADA72A2DDDAC0054519E /* HistoryCurrency.storyboard in Resources */,
 				D970AD752A2DA6D00054519E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -425,6 +447,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D970ADA52A2DDD980054519E /* HistoryCurrencyViewModel.swift in Sources */,
+				D970ADA32A2DDD840054519E /* HistoryCurrencyViewController.swift in Sources */,
 				D970AD722A2DA6D00054519E /* BtcViewController.swift in Sources */,
 				D970AD6E2A2DA6D00054519E /* AppDelegate.swift in Sources */,
 				D970AD702A2DA6D00054519E /* SceneDelegate.swift in Sources */,
@@ -610,7 +634,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = BTCApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = Btc.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -639,7 +663,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = BTCApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = Btc.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
