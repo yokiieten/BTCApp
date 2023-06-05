@@ -1,0 +1,6 @@
+framework module Pods_BTCAppTests {
+  umbrella header "Pods-BTCAppTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
