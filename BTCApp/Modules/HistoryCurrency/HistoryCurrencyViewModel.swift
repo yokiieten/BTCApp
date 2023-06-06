@@ -12,9 +12,4 @@ final class HistoryCurrencyViewModel {
     
     var historicalData: [BtcData] = []
     
-//    init(historicalData: [BtcData]) {
-//        self.historicalData = historicalData
-//    }
-//    
-    
 }

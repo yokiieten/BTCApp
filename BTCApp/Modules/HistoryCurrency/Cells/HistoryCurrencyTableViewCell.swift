@@ -2,7 +2,7 @@
 //  HistoryCurrencyTableViewCell.swift
 //  BTCApp
 //
-//  Created by Sahassawat on 5/6/2566 BE.
+//  Created by Sahassawat on 6/6/2566 BE.
 //
 
 import UIKit
@@ -12,7 +12,7 @@ class HistoryCurrencyTableViewCell: UITableViewCell {
     @IBOutlet weak var usdLabel: UILabel!
     @IBOutlet weak var gbpLabel: UILabel!
     @IBOutlet weak var eurLabel: UILabel!
-    
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

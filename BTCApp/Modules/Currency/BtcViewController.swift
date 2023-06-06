@@ -26,7 +26,7 @@ class BtcViewController: UIViewController {
     }
     
     private func startAutoUpdate() {
-        Timer.scheduledTimer(withTimeInterval: 60, repeats: true) { [weak self] _ in
+        Timer.scheduledTimer(withTimeInterval: 3, repeats: true) { [weak self] _ in
             self?.viewModel.fetchData()
         }
     }
@@ -45,6 +45,7 @@ class BtcViewController: UIViewController {
         let storyboard = UIStoryboard(name: "HistoryCurrency", bundle: nil)
         guard let vc = storyboard.instantiateViewController(withIdentifier: "HistoryCurrencyViewController") as? HistoryCurrencyViewController else { return }
         vc.viewModel.historicalData = viewModel.historicalData
+//        self.navigationController?.pushViewController(vc, animated: true)
         present(vc, animated: true)
     }
 }
