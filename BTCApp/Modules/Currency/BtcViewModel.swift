@@ -58,6 +58,7 @@ class BtcViewModel {
     var historicalData: [BtcData] = []
     var updateTimer: Timer?
     var didUpdatePrice: (() -> Void)?
+    var currentSelect: Int = 0
 
      func fetchData() {
         guard let url = URL(string: "https://api.coindesk.com/v1/bpi/currentprice.json") else {

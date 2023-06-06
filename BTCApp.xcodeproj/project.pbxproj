@@ -26,10 +26,16 @@
 		D970ADA72A2DDDAC0054519E /* HistoryCurrency.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D970ADA62A2DDDAC0054519E /* HistoryCurrency.storyboard */; };
 		D970ADA92A2DDDCB0054519E /* Btc.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D970ADA82A2DDDCB0054519E /* Btc.storyboard */; };
 		D9B8059F2A2F72C300B79D91 /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B8059A2A2F72C300B79D91 /* ViewExtension.swift */; };
-		D9B805A02A2F72C300B79D91 /* URLRequest+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B8059B2A2F72C300B79D91 /* URLRequest+Extension.swift */; };
 		D9B805A12A2F72C300B79D91 /* UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B8059C2A2F72C300B79D91 /* UITableView.swift */; };
 		D9B805A22A2F72C300B79D91 /* UITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B8059D2A2F72C300B79D91 /* UITableViewCell.swift */; };
 		D9B805A32A2F72C300B79D91 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B8059E2A2F72C300B79D91 /* UIImageView.swift */; };
+		D9B805AA2A2F77EC00B79D91 /* BottomSheetPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B805A52A2F77EC00B79D91 /* BottomSheetPresentationController.swift */; };
+		D9B805AB2A2F77EC00B79D91 /* BouncyAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B805A62A2F77EC00B79D91 /* BouncyAnimator.swift */; };
+		D9B805AC2A2F77EC00B79D91 /* BottomSheetTransitioningDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B805A72A2F77EC00B79D91 /* BottomSheetTransitioningDelegate.swift */; };
+		D9B805AD2A2F77EC00B79D91 /* BottomSheetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B805A82A2F77EC00B79D91 /* BottomSheetViewModel.swift */; };
+		D9B805AE2A2F77EC00B79D91 /* BottomSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B805A92A2F77EC00B79D91 /* BottomSheetViewController.swift */; };
+		D9B805B02A2F791400B79D91 /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B805AF2A2F791400B79D91 /* UIButton.swift */; };
+		D9B805B22A2F7A0300B79D91 /* UIStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B805B12A2F7A0300B79D91 /* UIStackView.swift */; };
 		F2ACD59E551430A0990D9D1F /* Pods_BTCApp_BTCAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D8A6875A71295F5B96145C8 /* Pods_BTCApp_BTCAppUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -80,10 +86,16 @@
 		D970ADA62A2DDDAC0054519E /* HistoryCurrency.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HistoryCurrency.storyboard; sourceTree = "<group>"; };
 		D970ADA82A2DDDCB0054519E /* Btc.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Btc.storyboard; sourceTree = "<group>"; };
 		D9B8059A2A2F72C300B79D91 /* ViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
-		D9B8059B2A2F72C300B79D91 /* URLRequest+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URLRequest+Extension.swift"; sourceTree = "<group>"; };
 		D9B8059C2A2F72C300B79D91 /* UITableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableView.swift; sourceTree = "<group>"; };
 		D9B8059D2A2F72C300B79D91 /* UITableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableViewCell.swift; sourceTree = "<group>"; };
 		D9B8059E2A2F72C300B79D91 /* UIImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
+		D9B805A52A2F77EC00B79D91 /* BottomSheetPresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomSheetPresentationController.swift; sourceTree = "<group>"; };
+		D9B805A62A2F77EC00B79D91 /* BouncyAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BouncyAnimator.swift; sourceTree = "<group>"; };
+		D9B805A72A2F77EC00B79D91 /* BottomSheetTransitioningDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomSheetTransitioningDelegate.swift; sourceTree = "<group>"; };
+		D9B805A82A2F77EC00B79D91 /* BottomSheetViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomSheetViewModel.swift; sourceTree = "<group>"; };
+		D9B805A92A2F77EC00B79D91 /* BottomSheetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomSheetViewController.swift; sourceTree = "<group>"; };
+		D9B805AF2A2F791400B79D91 /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
+		D9B805B12A2F7A0300B79D91 /* UIStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStackView.swift; sourceTree = "<group>"; };
 		F61CFE78433C0149FA792D47 /* Pods-BTCApp-BTCAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BTCApp-BTCAppUITests.release.xcconfig"; path = "Target Support Files/Pods-BTCApp-BTCAppUITests/Pods-BTCApp-BTCAppUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -195,6 +207,7 @@
 		D970AD9D2A2DAECE0054519E /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				D9B805A42A2F77EC00B79D91 /* BottomSheet */,
 				D970ADA12A2DDCE10054519E /* HistoryCurrency */,
 				D970AD9E2A2DAF080054519E /* Currency */,
 			);
@@ -235,12 +248,25 @@
 			isa = PBXGroup;
 			children = (
 				D9B8059A2A2F72C300B79D91 /* ViewExtension.swift */,
-				D9B8059B2A2F72C300B79D91 /* URLRequest+Extension.swift */,
 				D9B8059C2A2F72C300B79D91 /* UITableView.swift */,
 				D9B8059D2A2F72C300B79D91 /* UITableViewCell.swift */,
 				D9B8059E2A2F72C300B79D91 /* UIImageView.swift */,
+				D9B805AF2A2F791400B79D91 /* UIButton.swift */,
+				D9B805B12A2F7A0300B79D91 /* UIStackView.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		D9B805A42A2F77EC00B79D91 /* BottomSheet */ = {
+			isa = PBXGroup;
+			children = (
+				D9B805A52A2F77EC00B79D91 /* BottomSheetPresentationController.swift */,
+				D9B805A62A2F77EC00B79D91 /* BouncyAnimator.swift */,
+				D9B805A72A2F77EC00B79D91 /* BottomSheetTransitioningDelegate.swift */,
+				D9B805A82A2F77EC00B79D91 /* BottomSheetViewModel.swift */,
+				D9B805A92A2F77EC00B79D91 /* BottomSheetViewController.swift */,
+			);
+			path = BottomSheet;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -490,13 +516,19 @@
 				D970ADA32A2DDD840054519E /* HistoryCurrencyViewController.swift in Sources */,
 				D9B805A32A2F72C300B79D91 /* UIImageView.swift in Sources */,
 				D970AD722A2DA6D00054519E /* BtcViewController.swift in Sources */,
+				D9B805AA2A2F77EC00B79D91 /* BottomSheetPresentationController.swift in Sources */,
+				D9B805B22A2F7A0300B79D91 /* UIStackView.swift in Sources */,
 				D970AD6E2A2DA6D00054519E /* AppDelegate.swift in Sources */,
-				D9B805A02A2F72C300B79D91 /* URLRequest+Extension.swift in Sources */,
+				D9B805AC2A2F77EC00B79D91 /* BottomSheetTransitioningDelegate.swift in Sources */,
+				D9B805AB2A2F77EC00B79D91 /* BouncyAnimator.swift in Sources */,
 				D916AF712A2F6DCF0089B1F6 /* HistoryCurrencyTableViewCell.swift in Sources */,
 				D9B805A12A2F72C300B79D91 /* UITableView.swift in Sources */,
+				D9B805AE2A2F77EC00B79D91 /* BottomSheetViewController.swift in Sources */,
 				D9B805A22A2F72C300B79D91 /* UITableViewCell.swift in Sources */,
 				D970AD702A2DA6D00054519E /* SceneDelegate.swift in Sources */,
 				D970ADA02A2DAF260054519E /* BtcViewModel.swift in Sources */,
+				D9B805AD2A2F77EC00B79D91 /* BottomSheetViewModel.swift in Sources */,
+				D9B805B02A2F791400B79D91 /* UIButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

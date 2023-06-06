@@ -8,12 +8,33 @@
 
 import UIKit
 
+enum CurrencySortOption: Int, CaseIterable {
+    case usd = 0
+    case gbp = 1
+    case eur = 2
+    
+    var title: String {
+        switch self {
+        case .usd:
+            return "USD"
+
+        case .gbp:
+            return "GBP"
+
+        case .eur:
+            return "EUR"
+        }
+    }
+    
+}
+
 class BtcViewController: UIViewController {
     let viewModel = BtcViewModel()
     
     @IBOutlet weak var usdLabel: UILabel!
     @IBOutlet weak var gbpLabel: UILabel!
     @IBOutlet weak var eurLabel: UILabel!
+    @IBOutlet weak var selectCurrencyButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,7 +47,7 @@ class BtcViewController: UIViewController {
     }
     
     private func startAutoUpdate() {
-        Timer.scheduledTimer(withTimeInterval: 3, repeats: true) { [weak self] _ in
+        Timer.scheduledTimer(withTimeInterval: 60, repeats: true) { [weak self] _ in
             self?.viewModel.fetchData()
         }
     }
@@ -48,4 +69,37 @@ class BtcViewController: UIViewController {
 //        self.navigationController?.pushViewController(vc, animated: true)
         present(vc, animated: true)
     }
+    
+    @IBAction func showBottomSheet(_ sender: Any) {
+        let transitionDelegate = BottomSheetTransitioningDelegate()
+        transitionDelegate.isDisabledDismiss = false
+        let allSortOption = CurrencySortOption.allCases.map {
+            $0.title
+        }
+        let viewModel = BottomSheetViewModel(options: allSortOption, selectedIndex: viewModel.currentSelect)
+        let sortViewController = BottomSheetViewController(viewModel: viewModel)
+        sortViewController.transitioningDelegate = transitionDelegate
+        sortViewController.delegate = self
+        sortViewController.modalPresentationStyle = .custom
+        navigationController?.present(sortViewController, animated: true)
+    }
+    
+}
+
+extension BtcViewController: BottomSheetViewControllerDelegate {
+    
+    
+    func didSelectOption(atIndex index: Int) {
+        viewModel.currentSelect = index
+        let currencySortOption = CurrencySortOption(rawValue: index)
+        switch currencySortOption {
+        case .usd: selectCurrencyButton.setTitle("USD", for: .normal)
+        case .gbp: selectCurrencyButton.setTitle("GBP", for: .normal)
+        case .eur: selectCurrencyButton.setTitle("EUR", for: .normal)
+        case .none: break
+        }
+      
+    }
+    
+    
 }

@@ -223,4 +223,19 @@ extension UIView {
         layer.addSublayer(borderLayer)
         return borderLayer
     }
+    
+    func roundCorners(_ corners: UIRectCorner, radius: CGFloat) {
+        let maskPath = UIBezierPath(
+            roundedRect: bounds,
+            byRoundingCorners: corners,
+            cornerRadii: CGSize(width: radius, height: radius))
+
+        let shape = CAShapeLayer()
+        shape.path = maskPath.cgPath
+        layer.mask = shape
+    }
+    
+    func addSubviews(_ subviews: [UIView]) {
+        subviews.forEach { addSubview($0) }
+    }
 }

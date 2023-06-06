@@ -37,6 +37,7 @@ extension HistoryCurrencyViewController: UITableViewDataSource {
         return cell
     }
     
+    
 }
 
 extension HistoryCurrencyViewController: UITableViewDelegate {
