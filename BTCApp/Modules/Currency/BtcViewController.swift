@@ -40,4 +40,11 @@ class BtcViewController: UIViewController {
         gbpLabel.text = "\(btcData.bpi.gbp.symbol) \(btcData.bpi.gbp.rate)"
         eurLabel.text = "\(btcData.bpi.eur.symbol) \(btcData.bpi.eur.rate)"
     }
+    
+    @IBAction func tapViewHistory(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "HistoryCurrency", bundle: nil)
+        guard let vc = storyboard.instantiateViewController(withIdentifier: "HistoryCurrencyViewController") as? HistoryCurrencyViewController else { return }
+        vc.viewModel.historicalData = viewModel.historicalData
+        present(vc, animated: true)
+    }
 }

@@ -39,12 +39,25 @@
                                     </label>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i8x-g3-wCe">
+                                <rect key="frame" x="149.33333333333334" y="496.66666666666674" width="94.666666666666657" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="KbP-cS-zdt"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="ดูย้อนหลัง"/>
+                                <connections>
+                                    <action selector="tapViewHistory:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="juJ-BK-oQ3"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="vuh-g1-E4K" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="4iy-zz-sWW"/>
+                            <constraint firstItem="i8x-g3-wCe" firstAttribute="top" secondItem="vuh-g1-E4K" secondAttribute="bottom" id="CZP-y8-BwR"/>
                             <constraint firstItem="vuh-g1-E4K" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="RUw-xV-HWy"/>
+                            <constraint firstItem="i8x-g3-wCe" firstAttribute="centerX" secondItem="vuh-g1-E4K" secondAttribute="centerX" id="dER-1w-aHa"/>
                         </constraints>
                     </view>
                     <connections>

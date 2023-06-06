@@ -5,52 +5,51 @@
 //  Created by Sahassawat on 5/6/2566 BE.
 //
 
-import Foundation
 
 struct BtcData: Codable {
     let time: Time
     let disclaimer: String
     let chartName: String
     let bpi: Bpi
+}
 
-    struct Time: Codable {
-        let updated: String
-        let updatedISO: String
-        let updateduk: String
+struct Time: Codable {
+    let updated: String
+    let updatedISO: String
+    let updateduk: String
+}
+
+struct Bpi: Codable {
+    let usd: Currency
+    let gbp: Currency
+    let eur: Currency
+    
+    enum CodingKeys: String, CodingKey {
+        case usd = "USD"
+        case gbp = "GBP"
+        case eur = "EUR"
     }
+}
 
-    struct Bpi: Codable {
-        let usd: Currency
-        let gbp: Currency
-        let eur: Currency
-        
-        enum CodingKeys: String, CodingKey {
-            case usd = "USD"
-            case gbp = "GBP"
-            case eur = "EUR"
-        }
-
-        struct Currency: Codable {
-            let code: String
-            let symbol: String
-            let rate: String
-            let description: String
-            let rateFloat: Float
-
-            enum CodingKeys: String, CodingKey {
-                case code, symbol, rate, description
-                case rateFloat = "rate_float"
-            }
-        }
+struct Currency: Codable {
+    let code: String
+    let symbol: String
+    let rate: String
+    let description: String
+    let rateFloat: Float
+    
+    enum CodingKeys: String, CodingKey {
+        case code, symbol, rate, description
+        case rateFloat = "rate_float"
     }
 }
 
 import UIKit
+import Foundation
 
 class BtcViewModel {
     var btcData: BtcData? {
         didSet {
-            // เมื่อราคาถูกอัปเดต แจ้งให้ Controller ทราบ
             DispatchQueue.main.async {
                 self.didUpdatePrice?()
             }
@@ -99,4 +98,5 @@ class BtcViewModel {
         updateTimer?.invalidate()
         updateTimer = nil
     }
+
 }
