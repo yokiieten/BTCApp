@@ -39,6 +39,7 @@ class BtcViewController: UIViewController {
     @IBOutlet weak var convertVauleLabel: UILabel!
     @IBOutlet weak var shadowView: UIView!
     @IBOutlet weak var convertBTCshadowView: UIView!
+    @IBOutlet weak var errorLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,12 +50,22 @@ class BtcViewController: UIViewController {
                    self?.updateUI()
                }
         setupView()
+//        setupBackgroundView()
       
+    }
+    
+    private func setupBackgroundView() {
+        let image = UIImage(named: "bg")
+        let imageView = UIImageView(image: image!)
+        imageView.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height)
+        imageView.contentMode = .scaleToFill
+        self.view.insertSubview(imageView, at: 0)
     }
     
     private func setupView() {
         convertBTCshadowView.addShadow(ofColor: .black.withAlphaComponent(0.25), radius: 5, offset: CGSize(width: 0, height: 4))
         shadowView.addShadow(ofColor: .black.withAlphaComponent(0.25), radius: 5, offset: CGSize(width: 0, height: 4))
+        currencyValueTextField.delegate = self
     }
     
     private func startAutoUpdate() {
@@ -120,7 +131,26 @@ extension BtcViewController: BottomSheetViewControllerDelegate {
         case .none: break
         }
         viewModel.currentSelect = index
+        errorLabel.isHidden = true
     }
 
 
+}
+
+extension BtcViewController: UITextFieldDelegate {
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        guard let updatedString = (textField.text as NSString?)?.replacingCharacters(in: range, with: string) else { return false }
+        guard viewModel.currentSelect != -1 else {
+            errorLabel.isHidden = false
+            return false
+        }
+        errorLabel.isHidden = true
+        let amount = Double(updatedString)
+        guard let amount = amount else { return true }
+        guard let currency = CurrencySortOption(rawValue: viewModel.currentSelect), viewModel.currentSelect != -1 else { return true }
+        let btcAmount = viewModel.convertToBTC(amount: amount, currency: currency )
+        self.convertVauleLabel.text = "\(btcAmount)"
+        return true
+    }
 }

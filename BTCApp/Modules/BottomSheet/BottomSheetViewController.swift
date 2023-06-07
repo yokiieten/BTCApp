@@ -64,8 +64,9 @@ final class BottomSheetViewController: UIViewController {
         let titleLabel = UILabel()
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
 //        titleLabel.font = UIFont(resource: R.font.promptSemiBold, size: 16)
+        titleLabel.font = UIFont.init(name: "Verdana Bold", size: 16.0)
         titleLabel.textAlignment = .center
-        titleLabel.text = viewModel.title ?? "สกุลเงิน"
+        titleLabel.text = viewModel.title ?? "Currency"
         
         wrapperView.addSubviews([closeButton, titleLabel])
         
@@ -104,6 +105,7 @@ final class BottomSheetViewController: UIViewController {
             button.setTitleForAllStates(viewModel.displayedText(atIndex: index))
             button.setTitleColorForAllStates( .black)
 //            button.titleLabel?.font = UIFont(resource: R.font.promptMedium, size: 14)
+            button.titleLabel?.font = UIFont.init(name: "Verdana Medium", size: 14.0)
             button.titleEdgeInsets = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: -10)
             button.contentEdgeInsets = UIEdgeInsets(top: 0, left: margin, bottom: 0, right: margin)
             button.contentHorizontalAlignment = .left

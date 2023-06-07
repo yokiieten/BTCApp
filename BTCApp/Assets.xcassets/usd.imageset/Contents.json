@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "usd.png",
+      "filename" : "2-removebg-preview.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "usd 1.png",
+      "filename" : "2-removebg-preview 1.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "usd 2.png",
+      "filename" : "2-removebg-preview 2.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
