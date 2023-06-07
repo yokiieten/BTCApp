@@ -37,6 +37,8 @@ class BtcViewController: UIViewController {
     @IBOutlet weak var selectCurrencyButton: UIButton!
     @IBOutlet weak var currencyValueTextField: UITextField!
     @IBOutlet weak var convertVauleLabel: UILabel!
+    @IBOutlet weak var shadowView: UIView!
+    @IBOutlet weak var convertBTCshadowView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,6 +48,13 @@ class BtcViewController: UIViewController {
         viewModel.didUpdatePrice = { [weak self] in
                    self?.updateUI()
                }
+        setupView()
+      
+    }
+    
+    private func setupView() {
+        convertBTCshadowView.addShadow(ofColor: .black.withAlphaComponent(0.25), radius: 5, offset: CGSize(width: 0, height: 4))
+        shadowView.addShadow(ofColor: .black.withAlphaComponent(0.25), radius: 5, offset: CGSize(width: 0, height: 4))
     }
     
     private func startAutoUpdate() {
@@ -59,9 +68,9 @@ class BtcViewController: UIViewController {
             return
         }
         
-        usdLabel.text = "\(btcData.bpi.usd.symbol) \(btcData.bpi.usd.rate)"
-        gbpLabel.text = "\(btcData.bpi.gbp.symbol) \(btcData.bpi.gbp.rate)"
-        eurLabel.text = "\(btcData.bpi.eur.symbol) \(btcData.bpi.eur.rate)"
+        usdLabel.text = "\(btcData.bpi.usd.rate)"
+        gbpLabel.text = "\(btcData.bpi.gbp.rate)"
+        eurLabel.text = "\(btcData.bpi.eur.rate)"
     }
     
     @IBAction func tapViewHistory(_ sender: Any) {
@@ -97,21 +106,21 @@ class BtcViewController: UIViewController {
 }
 
 extension BtcViewController: BottomSheetViewControllerDelegate {
-    
-    
+
+
     func didSelectOption(atIndex index: Int) {
         viewModel.currentSelect = index
         let currencySortOption = CurrencySortOption(rawValue: index)
         switch currencySortOption {
         case .usd:
             selectCurrencyButton.setTitle("USD", for: .normal)
-            
+
         case .gbp: selectCurrencyButton.setTitle("GBP", for: .normal)
         case .eur: selectCurrencyButton.setTitle("EUR", for: .normal)
         case .none: break
         }
         viewModel.currentSelect = index
     }
-    
-    
+
+
 }
