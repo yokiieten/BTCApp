@@ -35,6 +35,8 @@ class BtcViewController: UIViewController {
     @IBOutlet weak var gbpLabel: UILabel!
     @IBOutlet weak var eurLabel: UILabel!
     @IBOutlet weak var selectCurrencyButton: UIButton!
+    @IBOutlet weak var currencyValueTextField: UITextField!
+    @IBOutlet weak var convertVauleLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -66,7 +68,6 @@ class BtcViewController: UIViewController {
         let storyboard = UIStoryboard(name: "HistoryCurrency", bundle: nil)
         guard let vc = storyboard.instantiateViewController(withIdentifier: "HistoryCurrencyViewController") as? HistoryCurrencyViewController else { return }
         vc.viewModel.historicalData = viewModel.historicalData
-//        self.navigationController?.pushViewController(vc, animated: true)
         present(vc, animated: true)
     }
     
@@ -84,6 +85,15 @@ class BtcViewController: UIViewController {
         navigationController?.present(sortViewController, animated: true)
     }
     
+    @IBAction func ConvertCurrency(_ sender: UIButton) {
+        guard let convertValueLabel = currencyValueTextField.text else { return }
+        let amount = Double(convertValueLabel)
+        guard let amount = amount else { return }
+        guard let currency = CurrencySortOption(rawValue: viewModel.currentSelect), viewModel.currentSelect != -1 else { return }
+        let btcAmount = viewModel.convertToBTC(amount: amount, currency: currency )
+        self.convertVauleLabel.text = "\(btcAmount)"
+    }
+    
 }
 
 extension BtcViewController: BottomSheetViewControllerDelegate {
@@ -93,12 +103,14 @@ extension BtcViewController: BottomSheetViewControllerDelegate {
         viewModel.currentSelect = index
         let currencySortOption = CurrencySortOption(rawValue: index)
         switch currencySortOption {
-        case .usd: selectCurrencyButton.setTitle("USD", for: .normal)
+        case .usd:
+            selectCurrencyButton.setTitle("USD", for: .normal)
+            
         case .gbp: selectCurrencyButton.setTitle("GBP", for: .normal)
         case .eur: selectCurrencyButton.setTitle("EUR", for: .normal)
         case .none: break
         }
-      
+        viewModel.currentSelect = index
     }
     
     

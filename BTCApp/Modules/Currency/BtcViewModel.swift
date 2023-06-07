@@ -58,7 +58,7 @@ class BtcViewModel {
     var historicalData: [BtcData] = []
     var updateTimer: Timer?
     var didUpdatePrice: (() -> Void)?
-    var currentSelect: Int = 0
+    var currentSelect: Int = -1
 
      func fetchData() {
         guard let url = URL(string: "https://api.coindesk.com/v1/bpi/currentprice.json") else {
@@ -99,5 +99,19 @@ class BtcViewModel {
         updateTimer?.invalidate()
         updateTimer = nil
     }
-
+    
+    func convertToBTC(amount: Double, currency: CurrencySortOption) -> String {
+        var btcAmount = 0.0
+        switch currency {
+        case .usd:
+            btcAmount = amount / Double(btcData?.bpi.usd.rateFloat ?? 0.0)
+        case .gbp:
+            btcAmount = amount / Double(btcData?.bpi.gbp.rateFloat ?? 0.0)
+        case .eur:
+            btcAmount = amount / Double(btcData?.bpi.eur.rateFloat ?? 0.0)
+        }
+        let formattedString = String(format: "%.7f", btcAmount)
+        return formattedString
+    }
+    
 }

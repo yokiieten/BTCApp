@@ -51,7 +51,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="beW-wq-tig">
-                                <rect key="frame" x="16" y="591" width="136.33333333333334" height="24"/>
+                                <rect key="frame" x="16" y="591" width="132.66666666666666" height="24"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="24" id="Mjf-6d-vOd"/>
                                 </constraints>
@@ -62,7 +62,7 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="W9Y-Pm-bVy">
-                                <rect key="frame" x="184.33333333333334" y="588" width="100.00000000000003" height="30"/>
+                                <rect key="frame" x="180.66666666666666" y="588" width="99.999999999999972" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="Fwu-Po-Efe"/>
                                     <constraint firstAttribute="height" constant="30" id="MIi-vC-O4v"/>
@@ -70,8 +70,8 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.0 BTC" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UGs-cv-wi6">
-                                <rect key="frame" x="316.33333333333331" y="592.66666666666663" width="60.666666666666686" height="20.333333333333371"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UGs-cv-wi6">
+                                <rect key="frame" x="312.66666666666669" y="592.66666666666663" width="24" height="20.333333333333371"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -83,21 +83,32 @@
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="แปลง"/>
+                                <connections>
+                                    <action selector="ConvertCurrency:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="tCz-sW-NHN"/>
+                                </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BTC" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zm1-oW-N0E">
+                                <rect key="frame" x="344.66666666666669" y="592.66666666666663" width="32.333333333333314" height="20.333333333333371"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="vuh-g1-E4K" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="4iy-zz-sWW"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="zm1-oW-N0E" secondAttribute="trailing" constant="16" id="4sD-Ex-Rke"/>
                             <constraint firstItem="cH2-ZG-aZs" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="30" id="5d4-Sx-OgW"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="UGs-cv-wi6" secondAttribute="trailing" constant="16" id="94Z-wA-uxd"/>
                             <constraint firstItem="W9Y-Pm-bVy" firstAttribute="leading" secondItem="beW-wq-tig" secondAttribute="trailing" constant="32" id="9kf-KR-z4I"/>
                             <constraint firstItem="i8x-g3-wCe" firstAttribute="top" secondItem="vuh-g1-E4K" secondAttribute="bottom" id="CZP-y8-BwR"/>
+                            <constraint firstItem="zm1-oW-N0E" firstAttribute="leading" secondItem="UGs-cv-wi6" secondAttribute="trailing" constant="8" id="D9x-iB-mXt"/>
                             <constraint firstItem="UGs-cv-wi6" firstAttribute="centerY" secondItem="W9Y-Pm-bVy" secondAttribute="centerY" id="Gpa-O0-sZy"/>
                             <constraint firstItem="beW-wq-tig" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="IzY-a0-Led"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="cH2-ZG-aZs" secondAttribute="trailing" constant="30" id="LCg-ji-zts"/>
                             <constraint firstItem="vuh-g1-E4K" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="RUw-xV-HWy"/>
                             <constraint firstItem="W9Y-Pm-bVy" firstAttribute="centerY" secondItem="beW-wq-tig" secondAttribute="centerY" id="Tha-Dp-jTs"/>
+                            <constraint firstItem="zm1-oW-N0E" firstAttribute="centerY" secondItem="UGs-cv-wi6" secondAttribute="centerY" id="ZfB-Ev-xzQ"/>
                             <constraint firstItem="i8x-g3-wCe" firstAttribute="centerX" secondItem="vuh-g1-E4K" secondAttribute="centerX" id="dER-1w-aHa"/>
                             <constraint firstItem="UGs-cv-wi6" firstAttribute="leading" secondItem="W9Y-Pm-bVy" secondAttribute="trailing" constant="32" id="hK0-Ye-GTD"/>
                             <constraint firstItem="beW-wq-tig" firstAttribute="top" secondItem="i8x-g3-wCe" secondAttribute="bottom" constant="46.333333333333258" id="r2F-H1-803"/>
@@ -106,6 +117,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="b6g-td-Idy"/>
                     <connections>
+                        <outlet property="convertVauleLabel" destination="UGs-cv-wi6" id="gwn-6f-o7E"/>
+                        <outlet property="currencyValueTextField" destination="W9Y-Pm-bVy" id="yPv-dB-5FB"/>
                         <outlet property="eurLabel" destination="Cbe-rm-PYi" id="Trs-hh-xAu"/>
                         <outlet property="gbpLabel" destination="vSS-Vt-0dk" id="Gll-Kz-a8d"/>
                         <outlet property="selectCurrencyButton" destination="beW-wq-tig" id="x9p-FB-MXh"/>
