@@ -78,8 +78,8 @@
             filePath = "BTCApp/Modules/Currency/BtcViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "73"
-            endingLineNumber = "73"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
             landmarkName = "startAutoUpdate()"
             landmarkType = "7">
          </BreakpointContent>
@@ -501,8 +501,8 @@
             filePath = "BTCApp/Modules/Currency/BtcViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "113"
-            endingLineNumber = "113"
+            startingLineNumber = "103"
+            endingLineNumber = "103"
             landmarkName = "ConvertCurrency(_:)"
             landmarkType = "7">
             <Locations>
@@ -549,8 +549,8 @@
             filePath = "BTCApp/Modules/Currency/BtcViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "111"
-            endingLineNumber = "111"
+            startingLineNumber = "101"
+            endingLineNumber = "101"
             landmarkName = "ConvertCurrency(_:)"
             landmarkType = "7">
             <Locations>
@@ -642,8 +642,8 @@
             filePath = "BTCApp/Modules/Currency/BtcViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "110"
-            endingLineNumber = "110"
+            startingLineNumber = "100"
+            endingLineNumber = "100"
             landmarkName = "ConvertCurrency(_:)"
             landmarkType = "7">
             <Locations>
@@ -690,8 +690,8 @@
             filePath = "BTCApp/Modules/Currency/BtcViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "151"
-            endingLineNumber = "151"
+            startingLineNumber = "141"
+            endingLineNumber = "141"
             landmarkName = "textField(_:shouldChangeCharactersIn:replacementString:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -706,8 +706,8 @@
             filePath = "BTCApp/Modules/Currency/BtcViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "143"
-            endingLineNumber = "143"
+            startingLineNumber = "133"
+            endingLineNumber = "133"
             landmarkName = "textField(_:shouldChangeCharactersIn:replacementString:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -722,8 +722,8 @@
             filePath = "BTCApp/Modules/Currency/BtcViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "150"
-            endingLineNumber = "150"
+            startingLineNumber = "140"
+            endingLineNumber = "140"
             landmarkName = "textField(_:shouldChangeCharactersIn:replacementString:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -738,8 +738,8 @@
             filePath = "BTCApp/Modules/Currency/BtcViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "145"
-            endingLineNumber = "145"
+            startingLineNumber = "135"
+            endingLineNumber = "135"
             landmarkName = "textField(_:shouldChangeCharactersIn:replacementString:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -754,8 +754,8 @@
             filePath = "BTCApp/Modules/Currency/BtcViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "146"
-            endingLineNumber = "146"
+            startingLineNumber = "136"
+            endingLineNumber = "136"
             landmarkName = "textField(_:shouldChangeCharactersIn:replacementString:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -770,8 +770,8 @@
             filePath = "BTCApp/Modules/Currency/BtcViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "148"
-            endingLineNumber = "148"
+            startingLineNumber = "138"
+            endingLineNumber = "138"
             landmarkName = "textField(_:shouldChangeCharactersIn:replacementString:)"
             landmarkType = "7">
          </BreakpointContent>

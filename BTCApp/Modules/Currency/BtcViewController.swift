@@ -50,16 +50,6 @@ class BtcViewController: UIViewController {
                    self?.updateUI()
                }
         setupView()
-//        setupBackgroundView()
-      
-    }
-    
-    private func setupBackgroundView() {
-        let image = UIImage(named: "bg")
-        let imageView = UIImageView(image: image!)
-        imageView.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height)
-        imageView.contentMode = .scaleToFill
-        self.view.insertSubview(imageView, at: 0)
     }
     
     private func setupView() {
